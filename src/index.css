@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light, dark;
+}
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+}
+
+[data-theme="light"] {
+  --p: 65% 0.15 250; /* Cyber Cyan-ish */
+  --s: 60% 0.20 300; /* Cyber Purple-ish */
+  --a: 60% 0.25 340; /* Cyber Pink-ish */
+  --b1: 98% 0.01 250; /* Very light slate for base-100 */
+  --b2: 95% 0.02 250; /* Base-200 */
+  --b3: 90% 0.03 250; /* Base-300 */
+  --bc: 20% 0.02 250; /* Dark text for light mode */
+}
+
+[data-theme="dark"] {
+  --p: 75% 0.15 250; /* Brighter Cyan */
+  --s: 70% 0.20 300; /* Brighter Purple */
+  --a: 70% 0.25 340; /* Brighter Pink */
+  --b1: 15% 0.03 260; /* Deep Obsidian */
+  --b2: 18% 0.04 260; /* Obsidian Card */
+  --b3: 22% 0.05 260; /* Lighter Obsidian */
+  --bc: 95% 0.01 250; /* Light text for dark mode */
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--fallback-b1,oklch(var(--b1)));
+}
+::-webkit-scrollbar-thumb {
+  background: var(--fallback-bc,oklch(var(--bc)/0.2));
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fallback-bc,oklch(var(--bc)/0.4));
+}
+
+/* Glassmorphism panel */
+.glass-panel {
+  background: color-mix(in srgb, var(--fallback-b1,oklch(var(--b1))) 70%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid color-mix(in srgb, var(--fallback-bc,oklch(var(--bc))) 10%, transparent);
+}
+
+.glass-panel-glow {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-panel-glow:hover {
+  border-color: color-mix(in srgb, var(--fallback-p,oklch(var(--p))) 30%, transparent);
+  box-shadow: 0 8px 40px color-mix(in srgb, var(--fallback-p,oklch(var(--p))) 15%, transparent);
+  transform: translateY(-2px);
+}
+
+/* Selection highlight */
+::selection {
+  background: color-mix(in srgb, var(--fallback-p,oklch(var(--p))) 35%, transparent);
+  color: var(--fallback-pc,oklch(var(--pc)));
+}
+
+/* Mesh Moving Background Gradient - adaptive */
+.mesh-gradient {
+  background-color: var(--fallback-b1,oklch(var(--b1)));
+  background-image: 
+    radial-gradient(at 10% 20%, color-mix(in srgb, var(--fallback-p,oklch(var(--p))) 15%, transparent) 0px, transparent 50%),
+    radial-gradient(at 90% 10%, color-mix(in srgb, var(--fallback-s,oklch(var(--s))) 15%, transparent) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, color-mix(in srgb, var(--fallback-a,oklch(var(--a))) 10%, transparent) 0px, transparent 50%);
+  background-attachment: fixed;
+}
