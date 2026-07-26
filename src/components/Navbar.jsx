@@ -60,8 +60,8 @@ const Navbar = () => {
   const handleResumeDownload = (e) => {
     e.preventDefault();
     const link = document.createElement('a');
-    link.href = '/public/Taiyeaba-Resume.pdf'; 
-    link.download = 'Taiyeaba_Resume.pdf'; 
+    link.href = '/Taiyeaba-Resume.pdf'; 
+    link.download = 'Taiyeaba-Resume.pdf'; 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
