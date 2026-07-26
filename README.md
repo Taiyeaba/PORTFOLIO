@@ -4,7 +4,7 @@ A modern and responsive developer portfolio built with **React.js**, showcasing 
 
 ## 🌐 Live Demo
 
-🔗 https://extraordinary-sherbet-470461.netlify.app/
+🔗 https://resonant-phoenix-8a15c9.netlify.app
 
 ## 📌 Features
 
