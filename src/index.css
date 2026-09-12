@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, [data-theme="dark"], .dark *, [data-theme="dark"] *));
 @plugin "daisyui" {
   themes: light, dark;
 }
@@ -76,12 +77,18 @@ html {
   color: var(--fallback-pc,oklch(var(--pc)));
 }
 
-/* Mesh Moving Background Gradient - adaptive */
+/* Mesh Moving Background Gradient - adaptive & mobile GPU friendly */
 .mesh-gradient {
   background-color: var(--fallback-b1,oklch(var(--b1)));
   background-image: 
     radial-gradient(at 10% 20%, color-mix(in srgb, var(--fallback-p,oklch(var(--p))) 15%, transparent) 0px, transparent 50%),
     radial-gradient(at 90% 10%, color-mix(in srgb, var(--fallback-s,oklch(var(--s))) 15%, transparent) 0px, transparent 50%),
     radial-gradient(at 50% 80%, color-mix(in srgb, var(--fallback-a,oklch(var(--a))) 10%, transparent) 0px, transparent 50%);
-  background-attachment: fixed;
+  background-attachment: scroll;
+}
+
+@media (min-width: 1024px) {
+  .mesh-gradient {
+    background-attachment: fixed;
+  }
 }
