@@ -4,7 +4,7 @@ A modern and responsive developer portfolio built with **React.js**, showcasing 
 
 ## 🌐 Live Demo
 
-🔗 https://jade-piroshki-dd03da.netlify.app
+🔗  https://portfolio-05844e.netlify.app/
 
 ## 📌 Features
 
