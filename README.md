@@ -4,7 +4,7 @@ A modern and responsive developer portfolio built with **React.js**, showcasing 
 
 ## 🌐 Live Demo
 
-🔗  https://portfolio-05844e.netlify.app/
+🔗  https://portfolio-six-beta-2rcok8t4kz.vercel.app/
 
 ## 📌 Features
 
