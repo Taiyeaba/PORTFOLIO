@@ -127,9 +127,7 @@ const ProjectCard = ({
         {/* Top Header Row */}
         <div className="flex items-center justify-between gap-2 mb-2.5 sm:mb-3.5">
           <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
-            <span className="shrink-0 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg bg-slate-100 dark:bg-white/[0.06] border border-slate-200 dark:border-white/[0.08] text-[11px] sm:text-xs font-mono font-bold text-purple-600 dark:text-purple-300 shadow-xs select-none">
-              {projectNumber}
-            </span>
+            
             <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-purple-500/10 dark:bg-purple-500/15 border border-purple-500/25 dark:border-purple-500/30 text-[10px] sm:text-[11px] font-mono text-purple-600 dark:text-purple-300 font-semibold uppercase tracking-wider truncate max-w-[125px] xs:max-w-[160px] sm:max-w-[220px] select-none">
               {project.category}
             </span>

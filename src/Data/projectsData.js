@@ -12,10 +12,40 @@ import {
   FaShoppingBag,
   FaFlask,
   FaBolt,
-  FaBuilding
+  FaBuilding,
+  FaUtensils
 } from "react-icons/fa";
 
 export const projectsData = [
+
+
+
+{
+  id: 12,
+  title: "Restaurant Website",
+  description:
+    "A high-end restaurant website built with React 19, Vite 8, and Tailwind CSS v4. Designed for luxury hospitality, it features a cinematic video hero, interactive menu, animated dish details, chef spotlight, gallery lightbox, and WhatsApp or email-based table reservations.",
+  technologies: [
+    "React 19",
+    "Vite 8",
+    "Tailwind CSS v4",
+    "GSAP",
+    "ScrollTrigger",
+    "Framer Motion",
+    "Lenis",
+    "Lucide React"
+  ],
+  github: "https://github.com/Taiyeaba/12-Resturent-Website.git",
+  live: "https://12-resturent-website.vercel.app/",
+  category: "React Landing Page",
+  icon: FaUtensils,
+  image: "/images/restaurant.webp"
+}
+,
+
+
+
+
   {
     id: 1,
     title: "Coffee Haven",
